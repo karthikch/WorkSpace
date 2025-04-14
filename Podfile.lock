@@ -1,0 +1,22 @@
+PODS:
+  - DetailTableView (0.1.0)
+
+DEPENDENCIES:
+  - DetailTableView (from `https://github.com/karthikch/DetailTableView.git`, tag `0.1.0`)
+
+EXTERNAL SOURCES:
+  DetailTableView:
+    :git: https://github.com/karthikch/DetailTableView.git
+    :tag: 0.1.0
+
+CHECKOUT OPTIONS:
+  DetailTableView:
+    :git: https://github.com/karthikch/DetailTableView.git
+    :tag: 0.1.0
+
+SPEC CHECKSUMS:
+  DetailTableView: a3cd6e586d10c7e9e0f088cdddd33a344b930b19
+
+PODFILE CHECKSUM: ce4805ca902c201e9c6bb9ddc0bdb169286bfbf1
+
+COCOAPODS: 1.16.2

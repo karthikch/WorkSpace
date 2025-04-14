@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3CCB2ADC3A9431AB3A2DC188 /* Pods_WorkSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF9A3D34093BD079321CF3D /* Pods_WorkSpace.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		73E3486E2DA9137100DBEB0C /* WorkSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FF9A3D34093BD079321CF3D /* Pods_WorkSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18BB332193F5AF776AB39B1 /* Pods-WorkSpace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkSpace.debug.xcconfig"; path = "Target Support Files/Pods-WorkSpace/Pods-WorkSpace.debug.xcconfig"; sourceTree = "<group>"; };
+		AF32AAB37EB9F9673EA11312 /* Pods-WorkSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkSpace.release.xcconfig"; path = "Target Support Files/Pods-WorkSpace/Pods-WorkSpace.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CCB2ADC3A9431AB3A2DC188 /* Pods_WorkSpace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				73E348702DA9137100DBEB0C /* WorkSpace */,
 				73E3486F2DA9137100DBEB0C /* Products */,
+				FFFFC7EDE34C19A055D3EECB /* Pods */,
+				7CC28E8B4FD69689CD1F1CF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7CC28E8B4FD69689CD1F1CF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FF9A3D34093BD079321CF3D /* Pods_WorkSpace.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFFFC7EDE34C19A055D3EECB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A18BB332193F5AF776AB39B1 /* Pods-WorkSpace.debug.xcconfig */,
+				AF32AAB37EB9F9673EA11312 /* Pods-WorkSpace.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73E348812DA9137400DBEB0C /* Build configuration list for PBXNativeTarget "WorkSpace" */;
 			buildPhases = (
+				FFA73DFB0C1CC3335B2819EE /* [CP] Check Pods Manifest.lock */,
 				73E3486A2DA9137100DBEB0C /* Sources */,
 				73E3486B2DA9137100DBEB0C /* Frameworks */,
 				73E3486C2DA9137100DBEB0C /* Resources */,
+				6F1642D58700ADEC9F82AD0F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				73E348702DA9137100DBEB0C /* WorkSpace */,
 			);
 			name = WorkSpace;
-			packageProductDependencies = (
-			);
 			productName = WorkSpace;
 			productReference = 73E3486E2DA9137100DBEB0C /* WorkSpace.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F1642D58700ADEC9F82AD0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorkSpace/Pods-WorkSpace-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorkSpace/Pods-WorkSpace-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorkSpace/Pods-WorkSpace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFA73DFB0C1CC3335B2819EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WorkSpace-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		73E3486A2DA9137100DBEB0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,11 +209,13 @@
 /* Begin XCBuildConfiguration section */
 		73E348822DA9137400DBEB0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A18BB332193F5AF776AB39B1 /* Pods-WorkSpace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorkSpace/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -167,11 +238,13 @@
 		};
 		73E348832DA9137400DBEB0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF32AAB37EB9F9673EA11312 /* Pods-WorkSpace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorkSpace/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -1,0 +1,6 @@
+framework module DetailTableView {
+  umbrella header "DetailTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}
